@@ -1,7 +1,7 @@
 {
   "name": "Quantum Optics Lab",
   "short_name": "Optics Lab",
-  "description": "Free 3D optics & quantum optics simulator. Explore lenses, prisms, polarization, the double slit, Hong\u2013Ou\u2013Mandel and Bell tests in your browser. No install.",
+  "description": "Free 3D optics & quantum optics simulator. Explore lenses, prisms, polarization, the double slit, Hong–Ou–Mandel and Bell tests in your browser. No install.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -25,6 +25,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "favicon.svg",

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments</title>
+<title>Quantum Optics Lab Simulator – 3D Optics &amp; Quantum Experiments</title>
 <meta name="description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
 <link rel="canonical" href="https://nazat02.github.io/Quantum-Optics-Lab/simulation.html">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Quantum Optics Lab">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments">
+<meta property="og:title" content="Quantum Optics Lab Simulator – 3D Optics &amp; Quantum Experiments">
 <meta property="og:description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
 <meta property="og:url" content="https://nazat02.github.io/Quantum-Optics-Lab/simulation.html">
 <meta property="og:image" content="https://nazat02.github.io/Quantum-Optics-Lab/og-image.png">
@@ -22,7 +22,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="White light splitting into a rainbow through a prism, with the text Stop reading about light. Break it.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments">
+<meta name="twitter:title" content="Quantum Optics Lab Simulator – 3D Optics &amp; Quantum Experiments">
 <meta name="twitter:description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
 <meta name="twitter:image" content="https://nazat02.github.io/Quantum-Optics-Lab/og-image.png">
 <meta name="twitter:image:alt" content="White light splitting into a rainbow through a prism">
@@ -167,6 +167,7 @@ nav a#home:hover{color:#fff}
 </head>
 <body>
 <h1 class="sr">Quantum Optics Lab: interactive 3D optics and quantum optics simulator</h1>
+<section class="sr" aria-label="Experiment guides"><h2>Experiments in this simulator</h2><ul><li><a href="double-slit-simulator.html">Double slit experiment simulator</a></li><li><a href="bell-test-simulator.html">Bell test and CHSH inequality simulator</a></li><li><a href="hong-ou-mandel-simulator.html">Hong–Ou–Mandel effect simulator</a></li><li><a href="polarization-malus-law-simulator.html">Polarization and Malus's law simulator</a></li></ul></section>
 <noscript><div style="position:fixed;inset:0;z-index:99;background:#050507;color:#ededf0;padding:24px;font:16px/1.6 system-ui,sans-serif;overflow:auto"><h2>Quantum Optics Lab simulator</h2><p>This is an interactive 3D simulator and needs JavaScript and WebGL. It includes 40 optical systems (lenses, prisms, mirror rooms, light pipes), polarization in 3D, a cavity, quantum states and Wigner functions, Hong–Ou–Mandel interference, the double slit, and Bell / CHSH tests.</p><p><a style="color:#ff3b3b" href="./">Back to the Quantum Optics Lab home page</a></p></div></noscript>
 <nav id="tabs" aria-label="Experiments"><a id="home" href="./" aria-label="Back to home page">&#8249; Home</a></nav>
 <div id="stage"><canvas id="g" role="img" aria-label="Mirror room, first-person 3D view"></canvas><canvas id="d" role="img" aria-label="Interactive optics diagram"></canvas><canvas id="t" role="img" aria-label="Optics Lab 3D scene"></canvas><canvas id="p" role="img" aria-label="Polarization 3D scene"></canvas><canvas id="r" role="img" aria-label="Ray in room 3D scene"></canvas><div id="hint"></div><button id="reset" aria-label="Reset view">⟲</button></div>
@@ -1117,7 +1118,10 @@ new MutationObserver(function(ms){if(ms.some(function(m){return m.target.dataset
 nav.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;store.set('qol-tab',b.dataset.k);setC(false)});
 addEventListener('keydown',function(e){if((e.key!=='['&&e.key!==']')||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;var bs=[].slice.call(nav.querySelectorAll('button[data-k]')),i=bs.findIndex(function(b){return b.classList.contains('on')});var n=bs[i+(e.key===']'?1:-1)];if(n)n.click()});
 /* resume where you left off */
-var last=store.get('qol-tab');if(last){var tb=nav.querySelector('button[data-k="'+last+'"]');if(tb&&!tb.classList.contains('on'))tb.click()}
+/* deep links: simulation.html#slit | #bell | #hom | #pol | #cavity | #states | #ray | #room | #optics */
+function goHash(){var h=location.hash.slice(1),t=/^[a-z]+$/.test(h)&&nav.querySelector('button[data-k="'+h+'"]');if(t&&!t.classList.contains('on'))t.click();return !!t}
+if(!goHash()){var last=store.get('qol-tab');if(last){var tb=nav.querySelector('button[data-k="'+last+'"]');if(tb&&!tb.classList.contains('on'))tb.click()}}
+addEventListener('hashchange',goHash);
 edges();setTimeout(function(){edges();center()},400);
 if(matchMedia('(pointer:coarse)').matches&&!store.get('qol-tip')){store.set('qol-tip','1');setTimeout(function(){tip.classList.add('on')},1200);setTimeout(function(){tip.classList.remove('on')},7000)}
 })();

@@ -33,7 +33,7 @@ An interactive, in-browser optics and quantum-optics playground. Drag, orbit, an
 - **Real-time 3D** rendering with [three.js](https://threejs.org/) (r128), with orbit controls on touch and mouse.
 - **Mobile-first controls.** The settings panel collapses when you touch the scene and returns with one tap.
 - **Remembers your place.** The last experiment you opened is restored on your next visit.
-- **Zero dependencies to install.** Two static HTML files; three.js loads from a CDN.
+- **Zero dependencies to install.** Static HTML only, with all JavaScript embedded; three.js loads from a CDN.
 - **Landing page plus simulator**, linked in both directions.
 
 ## Experiments
@@ -82,15 +82,26 @@ Each experiment has its own control panel and live readouts that explain what th
 
 ```
 .
-├── index.html        # Landing page (must be named index.html for GitHub Pages)
-├── simulation.html   # The simulator: all 9 experiments, self-contained
-├── LICENSE           # CC BY 4.0 notice
+├── index.html                         # Landing page (must be named index.html)
+├── simulation.html                    # The simulator: all 9 experiments, self-contained
+├── double-slit-simulator.html         # SEO guide page -> simulation.html#slit
+├── bell-test-simulator.html           # SEO guide page -> simulation.html#bell
+├── hong-ou-mandel-simulator.html      # SEO guide page -> simulation.html#hom
+├── polarization-malus-law-simulator.html  # SEO guide page -> simulation.html#pol
+├── 404.html
+├── robots.txt
+├── sitemap.xml
+├── manifest.webmanifest
+├── favicon.svg  icon-192.png  icon-512.png  icon-maskable-512.png
+├── apple-touch-icon.png  og-image.png
+├── LICENSE
 └── README.md
 ```
 
-- `index.html` links to `simulation.html` from every "Launch the Lab" button.
+- `index.html` links to `simulation.html` from every "Launch the Lab" button and to the four guide pages from the footer.
+- Simulator deep links: `simulation.html#slit`, `#bell`, `#hom`, `#pol`, `#cavity`, `#states`, `#ray`, `#room`, `#optics`.
 - `simulation.html` links back to `./` (the landing page) via the **‹ Home** item in the tab strip.
-- Keep both files in the **same folder** so the relative links work.
+- Keep all files in the **same folder** so the relative links work.
 
 ## Run locally
 

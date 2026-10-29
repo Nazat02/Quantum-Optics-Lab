@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# Note: crawlers only read robots.txt at a domain root. On a github.io project
+# site this file is ignored; it takes effect if you add a custom domain.
 Sitemap: https://nazat02.github.io/Quantum-Optics-Lab/sitemap.xml
