@@ -1,0 +1,35 @@
+{
+  "name": "Quantum Optics Lab",
+  "short_name": "Optics Lab",
+  "description": "Free 3D optics & quantum optics simulator. Explore lenses, prisms, polarization, the double slit, Hong\u2013Ou\u2013Mandel and Bell tests in your browser. No install.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "lang": "en",
+  "categories": [
+    "education",
+    "science"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

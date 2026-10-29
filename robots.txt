@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nazat02.github.io/Quantum-Optics-Lab/sitemap.xml

@@ -3,7 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quantum Optics Lab</title>
+<title>Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments</title>
+<meta name="description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
+<link rel="canonical" href="https://nazat02.github.io/Quantum-Optics-Lab/simulation.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<meta name="color-scheme" content="dark">
+<meta name="application-name" content="Quantum Optics Lab">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quantum Optics Lab">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments">
+<meta property="og:description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
+<meta property="og:url" content="https://nazat02.github.io/Quantum-Optics-Lab/simulation.html">
+<meta property="og:image" content="https://nazat02.github.io/Quantum-Optics-Lab/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="White light splitting into a rainbow through a prism, with the text Stop reading about light. Break it.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quantum Optics Lab Simulator – 3D Optics & Quantum Experiments">
+<meta name="twitter:description" content="Run 40 optical systems and quantum optics experiments in 3D: polarization, double slit, Hong–Ou–Mandel, Bell/CHSH, cavities and Wigner functions. Free, in your browser.">
+<meta name="twitter:image" content="https://nazat02.github.io/Quantum-Optics-Lab/og-image.png">
+<meta name="twitter:image:alt" content="White light splitting into a rainbow through a prism">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+
 <style>
 :root{--bg:#050507;--line:rgba(255,255,255,.09);--fg:#ededf0;--mut:#8b8b96;--red:#e11d2e;--red2:#ff3b3b;--ac:#ff3b3b;color-scheme:dark;box-sizing:border-box}
 html,body{height:100%;margin:0;color:var(--fg);font:14px/1.4 Inter,ui-sans-serif,-apple-system,'SF Pro Text',system-ui,sans-serif;overflow:hidden;overflow-x:clip;overscroll-behavior:none;max-width:100vw;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;-webkit-font-smoothing:antialiased}
@@ -131,11 +160,17 @@ nav a#home:hover{color:#fff}
  #nr{right:0;margin-left:-40px;background:linear-gradient(270deg,#050507 40%,transparent)}
 }
 </style>
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/"><meta name="author" content="Md. Shaikhul Hadis Nazat"><meta name="copyright" content="© 2026 Md. Shaikhul Hadis Nazat, CC BY 4.0">
+<style>#lic{margin:18px 0 6px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;line-height:1.7;color:var(--mut);text-align:center}#lic a{color:inherit;text-decoration:underline;text-underline-offset:3px}#lic a:hover{color:#fff}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://nazat02.github.io/Quantum-Optics-Lab/simulation.html#app","name":"Quantum Optics Lab Simulator","alternateName":"Quantum Optics Lab 3D Simulator","url":"https://nazat02.github.io/Quantum-Optics-Lab/simulation.html","description":"A free interactive 3D optics and quantum optics simulator that runs in the browser. Explore lenses, prisms, polarization, the double slit, Hong-Ou-Mandel interference, Bell/CHSH tests, cavities and Wigner functions.","applicationCategory":"EducationalApplication","applicationSubCategory":"Physics simulation","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript and WebGL","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"image":"https://nazat02.github.io/Quantum-Optics-Lab/og-image.png","screenshot":"https://nazat02.github.io/Quantum-Optics-Lab/og-image.png","featureList":["40 ready-to-run optical systems (lenses, prisms, mirror rooms, light pipes, raindrop, brilliant-cut diamond)","3D polarization scenes and Malus's law","Ray tracing with Snell and Fresnel relations","Double-slit single-photon interference","Hong-Ou-Mandel photon bunching","Bell / CHSH correlations","Quantum states and Wigner functions","Optical cavity resonance","Touch-friendly controls with live equations"],"license":"https://creativecommons.org/licenses/by/4.0/","author":{"@type":"Person","name":"Md. Shaikhul Hadis Nazat","url":"https://github.com/Nazat02"},"creator":{"@type":"Person","name":"Md. Shaikhul Hadis Nazat","url":"https://github.com/Nazat02"},"copyrightHolder":{"@type":"Person","name":"Md. Shaikhul Hadis Nazat","url":"https://github.com/Nazat02"},"copyrightYear":2026,"keywords":"optics simulator, quantum optics, 3D physics simulation, polarization, double slit, Bell test, CHSH, Hong-Ou-Mandel, Wigner function, Snell's law, total internal reflection, interactive physics"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Quantum Optics Lab","item":"https://nazat02.github.io/Quantum-Optics-Lab/"},{"@type":"ListItem","position":2,"name":"Simulator","item":"https://nazat02.github.io/Quantum-Optics-Lab/simulation.html"}]}]}</script>
+<style>.sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}</style>
 </head>
 <body>
-<nav id="tabs"><a id="home" href="./" aria-label="Back to home page">&#8249; Home</a></nav>
-<div id="stage"><canvas id="g"></canvas><canvas id="d"></canvas><canvas id="t"></canvas><canvas id="p"></canvas><canvas id="r"></canvas><div id="hint"></div><button id="reset" aria-label="Reset view">⟲</button></div>
-<div id="panel" class="open"><button id="grip" aria-label="Show or hide controls"><span></span></button><div id="ro"></div><div id="ctl"></div></div>
+<h1 class="sr">Quantum Optics Lab: interactive 3D optics and quantum optics simulator</h1>
+<noscript><div style="position:fixed;inset:0;z-index:99;background:#050507;color:#ededf0;padding:24px;font:16px/1.6 system-ui,sans-serif;overflow:auto"><h2>Quantum Optics Lab simulator</h2><p>This is an interactive 3D simulator and needs JavaScript and WebGL. It includes 40 optical systems (lenses, prisms, mirror rooms, light pipes), polarization in 3D, a cavity, quantum states and Wigner functions, Hong–Ou–Mandel interference, the double slit, and Bell / CHSH tests.</p><p><a style="color:#ff3b3b" href="./">Back to the Quantum Optics Lab home page</a></p></div></noscript>
+<nav id="tabs" aria-label="Experiments"><a id="home" href="./" aria-label="Back to home page">&#8249; Home</a></nav>
+<div id="stage"><canvas id="g" role="img" aria-label="Mirror room, first-person 3D view"></canvas><canvas id="d" role="img" aria-label="Interactive optics diagram"></canvas><canvas id="t" role="img" aria-label="Optics Lab 3D scene"></canvas><canvas id="p" role="img" aria-label="Polarization 3D scene"></canvas><canvas id="r" role="img" aria-label="Ray in room 3D scene"></canvas><div id="hint"></div><button id="reset" aria-label="Reset view">⟲</button></div>
+<div id="panel" class="open"><button id="grip" aria-label="Show or hide controls"><span></span></button><div id="ro"></div><div id="ctl"></div><div id="lic">© 2026 Md. Shaikhul Hadis Nazat<br>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener">CC BY 4.0</a> · <a href="./">Home</a></div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const Pick={bind(btn,title,opts,get,set,groups){
